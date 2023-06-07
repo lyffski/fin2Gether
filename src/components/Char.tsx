@@ -73,7 +73,6 @@ const UploadPage: React.FC<MyComponentProps> = ({ data }) => {
 
   const a = Number
   console.log(charList);
-  console.log(charList[selectedNumber]);
 
   console.log("k,", data.cards);
   console.log("n,", data.cards[0]);
@@ -106,6 +105,7 @@ const UploadPage: React.FC<MyComponentProps> = ({ data }) => {
                 console.log("A", charList[cardIndex]); */
                 if (
                   card.idList === list.id 
+                  //@ts-ignore
                   && (charList[selectedNumber] == card.idMebemers)
                 ) { 
                   const descValues = card.desc.split(",");
